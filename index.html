@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mestre Royale - Gerador de Estratégias & Guias</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <a href="https://www.youtube.com/results?search_query=clash+royale+pro+gameplay+tournaments" target="_blank" rel="noopener noreferrer" class="btn-top-pro">
+    ▶ Assistir Jogadores Pros
+  </a>
+
+  <header>
+    <div class="header-content">
+      <h1>MESTRE ROYALE</h1>
+      <p>Monte seu deck e receba estratégias personalizadas do zero!</p>
+    </div>
+  </header>
+
+  <nav class="button-group">
+    <a href="#gerador" class="btn btn-gold">⚔️ Criar Estratégia</a>
+    <a href="#dicas" class="btn btn-blue">⚡ Dicas do Meta</a>
+    <a href="#estrategias-base" class="btn btn-red">🔥 Guia de Estilos</a>
+  </nav>
+
+  <main class="container">
+
+    <section id="gerador" class="card card-interativo">
+      <h2><span class="badge badge-gold">NOVO</span> Gerador de Estratégias do Zero</h2>
+      <p class="instrucao">Selecione até 4 cartas do seu deck para a IA da Arena calcular sua tática perfeita:</p>
+
+      <div class="deck-selector" id="deckSelector">
+        
+        <div class="card-option" data-name="Corredor" data-cost="4" data-type="wincon" data-speed="fast" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/hog-rider.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/hog-rider.png" alt="Corredor">
+          <span>Corredor (4)</span>
+        </div>
+
+        <div class="card-option" data-name="P.E.K.K.A." data-cost="7" data-type="heavy" data-speed="slow" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/pekka.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/pekka.png" alt="P.E.K.K.A.">
+          <span>P.E.K.K.A. (7)</span>
+        </div>
+
+        <div class="card-option" data-name="Megacavaleiro" data-cost="7" data-type="heavy" data-speed="slow" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/mega-knight.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/mega-knight.png" alt="Megacavaleiro">
+          <span>Megacavaleiro (7)</span>
+        </div>
+
+        <div class="card-option" data-name="O Tronco" data-cost="2" data-type="spell" data-speed="fast" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/the-log.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/the-log.png" alt="O Tronco">
+          <span>O Tronco (2)</span>
+        </div>
+
+        <div class="card-option" data-name="Balão" data-cost="5" data-type="wincon" data-speed="slow" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/balloon.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/balloon.png" alt="Balão">
+          <span>Balão (5)</span>
+        </div>
+
+        <div class="card-option" data-name="Mago Elétrico" data-cost="4" data-type="support" data-speed="fast" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/electro-wizard.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/electro-wizard.png" alt="Mago Elétrico">
+          <span>Mago Elétrico (4)</span>
+        </div>
+
+        <div class="card-option" data-name="Princesa" data-cost="3" data-type="support" data-speed="fast" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/princess.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/princess.png" alt="Princesa">
+          <span>Princesa (3)</span>
+        </div>
+
+        <div class="card-option" data-name="Dragão Infernal" data-cost="4" data-type="support" data-speed="slow" data-img="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/inferno-dragon.png">
+          <img src="https://cdns.royaleapi.com/cdn-cgi/image/w=150,h=180,quality=80,format=auto/static/img/cards-150/inferno-dragon.png" alt="Dragão Infernal">
+          <span>Dragão Inf. (4)</span>
+        </div>
+
+      </div>
+
+      <div class="deck-summary">
+        <h3>Sua Seleção (<span id="countSelected">0</span>/4):</h3>
+        <div class="selected-slots" id="selectedSlots">
+          <div class="slot empty">Vazio</div>
+          <div class="slot empty">Vazio</div>
+          <div class="slot empty">Vazio</div>
+          <div class="slot empty">Vazio</div>
+        </div>
+        <button class="btn btn-gold btn-action" id="btnGerar" disabled>⚡ Criar Minha Estratégia</button>
+      </div>
+
+      <div class="resultado-estrategia hidden" id="resultadoEstrategia">
+        <h3 id="resultadoTitulo">Estratégia Calculada</h3>
+        <p id="resultadoCusto" class="custo-tag">Custo Médio: 0.0 Elixir</p>
+        <div class="passos-gerados" id="resultadoPassos"></div>
+      </div>
+    </section>
+
+    <section id="dicas" class="card card-azul">
+      <h2><span class="badge badge-blue">AZUL</span> Fundamentos de Vitória</h2>
+      <ul class="dicas-list">
+        <li><strong>Controle de Elixir:</strong> Nunca gaste todo o seu elixir atacando sem saber quais cartas o oponente tem na mão.</li>
+        <li><strong>Defesa Centralizada:</strong> Posicione construções ou unidades defensivas no meio do mapa para ativar ambas as Torres da Princesa.</li>
+        <li><strong>Conhecimento do Ciclo:</strong> Guarde sempre o seu feitiço chave (como O Tronco ou Zap) para neutralizar as defesas do oponente na hora do ataque final.</li>
+      </ul>
+    </section>
+
+    <section id="estrategias-base" class="card card-vermelho">
+      <h2><span class="badge badge-red">VERMELHO</span> Arquétipos de Jogo</h2>
+      
+      <div class="estrategia-box">
+        <h3>1. Ciclo Rápido (Control / Fast Cycle)</h3>
+        <p>Ataques constantes de baixo custo. O objetivo é rodar a sua carta principal tão rápido que o oponente fica sem o counter certo para defender.</p>
+      </div>
+
+      <div class="estrategia-box">
+        <h3>2. Contra-Ataque Pesado (Beatdown / Counter-Push)</h3>
+        <p>Você acumula vantagem defendendo com cartas resistentes e, em seguida, coloca um suporte devastador por trás para derrubar a torre em uma só investida.</p>
+      </div>
+
+      <div class="estrategia-box">
+        <h3>3. Split / Linha Dupla (Dual Lane Pressure)</h3>
+        <p>Divide o ataque entre a torre da esquerda e a da direita, forçando o rival a dividir seus recursos de defesa e cometer erros de posicionamento.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mestre Royale - O Guia Supremo de Estratégias.</p>
+  </footer>
+
+  <script>
+    let selectedCards = [];
+
+    const cardOptions = document.querySelectorAll('.card-option');
+    const slots = document.querySelectorAll('.slot');
+    const btnGerar = document.getElementById('btnGerar');
+    const countSelected = document.getElementById('countSelected');
+    const resultadoEstrategia = document.getElementById('resultadoEstrategia');
+
+    cardOptions.forEach(card => {
+      card.addEventListener('click', () => {
+        const name = card.dataset.name;
+        const cost = parseFloat(card.dataset.cost);
+        const type = card.dataset.type;
+        const img = card.dataset.img;
+
+        const index = selectedCards.findIndex(c => c.name === name);
+
+        if (index > -1) {
+          selectedCards.splice(index, 1);
+          card.classList.remove('selected');
+        } else {
+          if (selectedCards.length < 4) {
+            selectedCards.push({ name, cost, type, img });
+            card.classList.add('selected');
+          }
+        }
+
+        updateUI();
+      });
+    });
+
+    function updateUI() {
+      countSelected.textContent = selectedCards.length;
+      btnGerar.disabled = selectedCards.length === 0;
+
+      slots.forEach((slot, idx) => {
+        if (selectedCards[idx]) {
+          slot.classList.remove('empty');
+          slot.innerHTML = `<img src="${selectedCards[idx].img}" alt="${selectedCards[idx].name}"><span>${selectedCards[idx].name}</span>`;
+        } else {
+          slot.classList.add('empty');
+          slot.innerHTML = 'Vazio';
+        }
+      });
+    }
+
+    btnGerar.addEventListener('click', () => {
+      if (selectedCards.length === 0) return;
+
+      const totalCost = selectedCards.reduce((acc, c) => acc + c.cost, 0);
+      const avgCost = (totalCost / selectedCards.length).toFixed(1);
+
+      const hasHeavy = selectedCards.some(c => c.type === 'heavy');
+      const hasWinCon = selectedCards.some(c => c.type === 'wincon');
+
+      let titulo = "";
+      let passos = [];
+
+      if (avgCost >= 4.5 || hasHeavy) {
+        titulo = "Estratégia: Muralha de Contra-Ataque Devastador";
+        passos = [
+          `<strong>1. Fase de Abertura:</strong> Como seu custo médio é de ${avgCost} de Elixir, jogue recuado. Espere o oponente gastar os recursos dele primeiro.`,
+          `<strong>2. Defesa Implacável:</strong> Defenda usando suas cartas mais pesadas (ex: ${selectedCards.find(c => c.type === 'heavy')?.name || selectedCards[0].name}) perto da sua Torre do Rei.`,
+          `<strong>3. O Contra-Ataque:</strong> Assim que a tropa inimiga for eliminada, coloque suas unidades de suporte no mesmo lado e avance com força máxima no Elixir em Dobro!`
+        ];
+      } else if (avgCost <= 3.5 && hasWinCon) {
+        titulo = "Estratégia: Pressão de Ciclo Acelerado";
+        passos = [
+          `<strong>1. Ritmo de Jogo:</strong> Seu custo médio de ${avgCost} de Elixir permite um ciclo rápido. Inicie o combate testando a defesa do oponente com ${selectedCards.find(c => c.type === 'wincon')?.name || selectedCards[0].name}.`,
+          `<strong>2. Quebra de Rotação:</strong> Force ataques constantes para que ele nunca consiga juntar elixir para montar um ataque grande.`,
+          `<strong>3. Finalização Precisa:</strong> Use suas cartas de suporte e feitiços para limpar o caminho e garantir dano consistente a cada ciclo.`
+        ];
+      } else {
+        titulo = "Estratégia: Controle Balanceado de Arena";
+        passos = [
+          `<strong>1. Adaptação Dinâmica:</strong> Seu deck possui custo equilibrado (${avgCost} de Elixir). Foque em defender com o menor gasto possível.`,
+          `<strong>2. Puxada de Atração (Kiting):</strong> Atraia as tropas para o centro do campo e finalize-as combinando ${selectedCards[0].name} com o apoio da torre.`,
+          `<strong>3. O Momento Certo:</strong> Ataque nos momentos em que seu adversário errar a rotação ou ficar sem elixir de defesa.`
+        ];
+      }
+
+      document.getElementById('resultadoTitulo').textContent = titulo;
+      document.getElementById('resultadoCusto').textContent = `Média de Elixir Calculada: ${avgCost}`;
+      
+      const passosHTML = passos.map(p => `<div class="passo-item">${p}</div>`).join('');
+      document.getElementById('resultadoPassos').innerHTML = passosHTML;
+
+      resultadoEstrategia.classList.remove('hidden');
+      resultadoEstrategia.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
